@@ -28,6 +28,10 @@ jobs:
           command: |
             npm run build:backend
       - run:
+          name: Get Backend Files
+          command: |
+            ls udagram-api/www
+      - run:
           name: Build Frontend Application
           command: |
             npm run build:frontend
