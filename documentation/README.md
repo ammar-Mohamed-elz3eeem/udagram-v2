@@ -16,31 +16,29 @@ See additional documentation in the documentation folder.
 
 ### FrontEnd S3 Bucket
 
-![FrontEnd S3 Bucket](./images/frontend_s3.png)
+![FrontEnd S3 Bucket](./images/frontend-s3.PNG)
 
-### Media S3 Bucket
+### S3 Bucket Objects
 
-![Media S3 Bucket](./images/media_s3.png)
+![Media S3 Bucket](./images/frontend-bucket.PNG)
 
-### PostgreSQL RDS database
+### RDS
 
-![PostgreSQL RDS database](./images/rds.png)
+![PostgreSQL RDS database](./images/rds.PNG)
 
-### CircleCI Pipeline
+### Pipeline
 
-![CircleCI Pipeline](./images/pipeline1.png)
+![CircleCI Pipeline](./images/pipeline.png)
 
-![CircleCI Pipeline](./images/pipeline2.png)
+Defineing Env Vars Here
 
-added secrets here
-
-![CircleCI Pipeline environment variables](./images/pipeline%20env.png)
+![CircleCI Pipeline environment variables](./images/env.png)
 
 Schema
 
 ![Pipeline Schema](./images/schema.png)
 
-### Architecture
+### Infrastructure
 
 ![Architecture](./images/infrastructure.png)
 
