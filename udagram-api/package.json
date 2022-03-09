@@ -10,7 +10,7 @@
     "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
-    "deploy": "eb use Udagramv2api-env --profile default && eb deploy Udagramv2api-env --profile default && eb setenv SECRET_ACCESS_KEY_ID=$AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_BUCKET=$AWS_BUCKET AWS_REGION=$AWS_DEFAULT_REGION JWT_SECRET=$JWT_SECRET POSTGRE_DBNAME=$POSTGRE_DBNAME POSTGRE_HOST=$POSTGRE_HOST POSTGRE_PASSWORD=$POSTGRE_PASSWORD POSTGRE_PORT=$POSTGRE_PORT POSTGRE_USERNAME=$POSTGRE_USERNAME PORT=3000  --profile default"
+    "deploy": "eb use Udagramv2api-env --profile default && eb deploy Udagramv2api-env --profile default && eb setenv SECRET_ACCESS_KEY_ID=$AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_BUCKET=$AWS_BUCKET AWS_REGION=$AWS_DEFAULT_REGION JWT_SECRET=$JWT_SECRET POSTGRE_DBNAME=$POSTGRE_DBNAME POSTGRE_HOST=$POSTGRE_HOST POSTGRE_PASSWORD=$POSTGRE_PASSWORD POSTGRE_PORT=$POSTGRE_PORT POSTGRE_USERNAME=$POSTGRE_USERNAME URL=$SERVER_URL PORT=3000  --profile default"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
