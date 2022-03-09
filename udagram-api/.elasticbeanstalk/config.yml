@@ -1,12 +1,12 @@
 branch-defaults:
   default:
-    environment: Ammarmassoududagramapi-env
+    environment: Udagramapi-env
 environment-defaults:
-  Ammarmassoududagramapi-env:
+  Udagramapi-env:
     branch: null
     repository: null
 global:
-  application_name: ammar-massoud-Udagram-api
+  application_name: Udagram-api
   default_ec2_keyname: null
   default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-1
