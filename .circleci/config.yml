@@ -42,4 +42,4 @@ jobs:
       - run:
           name: Deploy Frontend Application
           command: |
-            npm run deploy:frontend
+            aws s3 cp udagram-frontend/www s3://${AWS_BUCKET}/ --recursive
