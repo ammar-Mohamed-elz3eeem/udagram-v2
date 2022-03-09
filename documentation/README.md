@@ -12,7 +12,7 @@ See additional documentation in the documentation folder.
 
 ### Elastic Beanstalk Environment
 
-![Elastic Beanstalk Environment](./images/eb.png)
+![Elastic Beanstalk Environment](./images/eb.PNG)
 
 ### FrontEnd S3 Bucket
 
