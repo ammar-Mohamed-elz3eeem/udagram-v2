@@ -10,7 +10,8 @@ jobs:
     steps:
       - node/install
       - checkout
-      - aws-cli/setup
+      - aws-cli/setup:
+          profile-name: default
       - eb/setup
       - run:
           name: Install Backend Dendencies
