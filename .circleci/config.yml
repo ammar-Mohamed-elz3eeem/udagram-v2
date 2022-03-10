@@ -3,40 +3,45 @@ orbs:
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@1.3.1
   eb: circleci/aws-elastic-beanstalk@2.0.1
-jobs:
+
+workflows:
   build:
-    docker:
-      - image: "cimg/base:stable"
-    filters:
-      branches:
-        only:
-          - main
-          - beta
-    steps:
-      - node/install:
-          node-version: "16.13"
-      - checkout
-      - run: node --version
-      - aws-cli/setup:
-          profile-name: default
-      - eb/setup
-      - run:
-          name: Install Backend Dendencies
-          command: |
-            npm run install:backend
-      - run:
-          name: Install Frontend Dendencies
-          command: |
-            npm run install:frontend
-      - run:
-          name: Build Backend Application
-          command: |
-            npm run build:backend
-      - run:
-          name: Get Backend Files
-          command: |
-            ls udagram-api/www
-      - run:
-          name: Build Frontend Application
-          command: |
-            npm run build:frontend
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+          docker:
+            - image: "cimg/base:stable"
+          steps:
+            - node/install:
+                node-version: "16.13"
+            - checkout
+            - run: node --version
+            - aws-cli/setup:
+                profile-name: default
+            - eb/setup
+            - run:
+                name: Install Backend Dendencies
+                command: |
+                  npm run install:backend
+            - run:
+                name: Install Frontend Dendencies
+                command: |
+                  npm run install:frontend
+            - run:
+                name: Build Backend Application
+                command: |
+                  npm run build:backend
+            - run:
+                name: Get Backend Files
+                command: |
+                  ls udagram-api/www
+            - run:
+                name: Build Frontend Application
+                command: |
+                  npm run build:frontend
+
+jobs:
+  - build
