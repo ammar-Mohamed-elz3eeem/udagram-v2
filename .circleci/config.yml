@@ -5,13 +5,13 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
+    docker:
+      - image: "cimg/base:stable"
     filters:
       branches:
         only:
           - main
           - beta
-    docker:
-      - image: "cimg/base:stable"
     steps:
       - node/install:
           node-version: "16.13"
