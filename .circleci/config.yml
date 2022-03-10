@@ -5,6 +5,11 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
+    filters:
+      branches:
+        only:
+          - main
+          - beta
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -35,11 +40,3 @@ jobs:
           name: Build Frontend Application
           command: |
             npm run build:frontend
-      - run:
-          name: Deploy Backend Application
-          command: |
-            npm run deploy:backend
-      - run:
-          name: Deploy Frontend Application
-          command: |
-            aws s3 cp udagram-frontend/www s3://${AWS_BUCKET}/ --recursive
