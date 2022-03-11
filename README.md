@@ -14,6 +14,10 @@ See additional documentation in the documentation folder.
 
 ![Elastic Beanstalk Environment](./documentation/images/eb.PNG)
 
+### Pipeline Operations
+
+![FrontEnd S3 Bucket](./documentation/images/pipline.png)
+
 ### FrontEnd S3 Bucket
 
 ![FrontEnd S3 Bucket](./documentation/images/frontend-s3.PNG)
@@ -30,11 +34,11 @@ See additional documentation in the documentation folder.
 
 ![CircleCI Pipeline](./documentation/images/pipeline.png)
 
-Defineing Env Vars Here
+### Defineing Env Vars Here
 
 ![CircleCI Pipeline environment variables](./documentation/images/env.png)
 
-Schema
+### Pipeline Schema
 
 ![Pipeline Schema](./documentation/images/schema.png)
 
